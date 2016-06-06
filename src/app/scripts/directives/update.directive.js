@@ -12,7 +12,7 @@ angular.module('angularFireApp')
       templateUrl: 'views/update.template.html',
       restrict: 'E',
 
-      controller: function ($scope, FirebaseConnect, $location) {
+      controller: function ($scope, FirebaseConnect, $location, $window) {
         // ===================================
         // ========= Function update =========
         // ===================================
@@ -20,6 +20,7 @@ angular.module('angularFireApp')
           FirebaseConnect.updateMovie(movie)
             .then(function () {
               $scope.updatedSuccess = true;
+              $window.scrollTo(0, 0);
             })
             .catch(function () {
               $scope.updatedError = true;

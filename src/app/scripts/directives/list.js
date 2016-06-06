@@ -35,6 +35,5 @@ angular.module('angularFireApp')
           $location.path(path);
         }
       }
-
     };
   });

@@ -28,6 +28,17 @@ angular.module('angularFireApp')
               $scope.movieError = true;
             })
         };
+
+        // ==============================================
+        // ========= Function add/remove actors =========
+        // ==============================================
+        $scope.addingActor = function () {
+          $scope.movie.actors.push({})
+        };
+
+        $scope.removeActor = function (index) {
+          $scope.movie.actors.splice(index, 1);
+        };
         // $scope.addMovie = function () {
         //   FirebaseConnect.addMovie($scope.movie);
         // };
@@ -44,13 +55,10 @@ angular.module('angularFireApp')
         // ================================
         // ========= Upload image =========
         // ================================
-
         var fileInput = element.find('#fileUpload');
         var fileToUpload = null;
-        console.log(fileInput);
-        
-        fileInput.on('change', function (fileUpload) {
-          console.log('TOTO');
+
+        fileInput.bind('change', function (fileUpload) {
           var file = fileUpload.target.files[0];
           var fileReader = new FileReader();
           fileReader.onload = function (file) {
@@ -61,17 +69,6 @@ angular.module('angularFireApp')
             fileReader.readAsDataURL(file);
           }
         });
-
-        // ==============================================
-        // ========= Function add/remove actors =========
-        // ==============================================
-        scope.addingActor = function () {
-          scope.movie.actors.push({})
-        };
-
-        scope.removeActor = function (index) {
-          scope.movie.actors.splice(index, 1);
-        };
       }
     };
   });

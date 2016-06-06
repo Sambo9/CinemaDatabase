@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="angularFireApp">
   <head>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <meta charset="utf-8">
     <title>angularFireApp</title>
     <meta name="description" content="">
@@ -29,15 +30,15 @@
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
 
     <!-- endbower -->
     <!-- endbuild -->
@@ -45,13 +46,13 @@
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
     <!-- js files will be automatically insert here -->
+    <script src="app/scripts/directives/create.directive.js"></script>
+    <script src="app/scripts/controllers/create.js"></script>
     <script src="app/scripts/controllers/main.js"></script>
     <script src="app/scripts/controllers/about.js"></script>
     <script src="app/scripts/controllers/list.js"></script>
     <script src="app/scripts/services/firebaseconnect.js"></script>
     <script src="app/scripts/directives/list.js"></script>
-    <script src="app/scripts/directives/create.directive.js"></script>
-    <script src="app/scripts/controllers/create.js"></script>
     <script src="app/scripts/controllers/update.js"></script>
     <script src="app/scripts/directives/update.directive.js"></script>
     <!-- endinject -->

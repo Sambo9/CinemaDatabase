@@ -49,16 +49,21 @@ angular.module('angularFireApp')
         // ================================
         // ========= Upload image =========
         // ================================
-        element.find('#fileUpload').on('change', function (posterUpload) {
-          var file = posterUpload.target.files[0];
+        scope.fileChanged = function () {
+          var file = element.find('#fileUpload').get(0).files[0];
           var fileReader = new FileReader();
-          fileReader.onload = function (file) {
-            scope.movie.poster = file.target.result;
-          };
+
+          fileReader.addEventListener("load", function () {
+            file = fileReader.result;
+            scope.movie.poster = file;
+          }, false);
+
           if (file) {
             fileReader.readAsDataURL(file);
           }
-        });
+
+        };
+
       }
     };
   });

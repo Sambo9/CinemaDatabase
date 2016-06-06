@@ -1,0 +1,56 @@
+<div class="container">
+<div class="alert alert-success" ng-show="movieSuccess">
+  <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Film ajouté !</strong>
+</div>
+<div class="alert alert-warning" ng-show="movieError">
+  <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Erreur ! Film non ajouté</strong>
+</div>
+
+
+
+<form name='movieForm' class="" ng-submit="addMovie()">
+<div class="form-group">
+  <label for="titleInput">Titre</label>
+    <input type="text" id="titleInput" class="form-control" ng-model="movie.title" placeholder="Titre" required>
+</div>
+<div class="form-group">
+  <label for="directorInput">Réalisateur</label>
+    <input type="text" id="directorInput" class="form-control" ng-model="movie.director" placeholder="Réalisateur" required>
+</div>
+
+<div class="form-inline">
+  <label for="actorsInput">Acteurs</label>
+  <br/>
+    <div class="form-group" ng-repeat="actor in movie.actors">
+    <input type="text" class="form-control" id="actorsInput" ng-model="actor.firstname" placeholder="Prénom acteur">
+    <input type="text" class="form-control" ng-model="actor.lastname" placeholder="Nom acteur" >
+      <button type="button" class="btn btn-danger" ng-click="removeActor($index)">
+        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+      </button>
+    </div>
+</div>
+  <br/>
+<div class="form-group">
+    <button type="button" class="btn btn-success" ng-click="addingActor()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter un acteur
+    </button>
+</div>
+
+<div class="form-group">
+  <label for="rateSelect">Note : </label>
+    <select id="rateSelect" name="repeatSelect" id="repeatSelect" ng-model="movie.rate" ng-options="rate.name for rate in select">
+      <!--<option ng-repeat="option in select" value="{{option.id}}">{{option.name}}</option>-->
+    </select>
+</div>
+  <br/>
+<div class="form-group">
+  <input type="file" accept="image/*" id="fileUpload"  >
+</div>
+  <div class="form-group">
+  <button type="button" ng-click="redirect('/list')" class="btn btn-default">Retour</button>
+  <button type="submit" ng-disabled="movieForm.$invalid" class="btn btn-primary">Créer</button>
+  </div>
+</form>
+</div>

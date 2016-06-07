@@ -10,6 +10,14 @@
 </div>
 
 <h1>Liste des films</h1>
+  <br/>
+  <div class="form-group">
+  <label>Recherche :</label>
+  <input type="text" ng-model='filterByTitle' placeholder="Titre"/>
+  <input type="text" ng-model='filterByDirector' placeholder="Réalisateur"/>
+  <input type="text" ng-model='filterByActors' placeholder="Acteurs"/>
+  </div>
+
 <table class="table table-striped table-bordered table-active">
   <thead>
   <tr>
@@ -22,7 +30,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr ng-repeat="movie in movies">
+  <tr ng-repeat="movie in movies | filter:{title:filterByTitle, director:filterByDirector, actors:{lastname:filterByActors}}">
     <td>{{movie.title}}</td>
     <td>{{movie.director}}</td>
     <td>

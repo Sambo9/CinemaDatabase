@@ -8,27 +8,24 @@
  * Factory in the angularFireApp.
  */
 angular.module('angularFireApp')
-  .factory('FirebaseConnect', function (FIREBASE_URL, $firebaseAuth, $firebaseArray, $cookies, $window) {
+  .factory('FirebaseConnect', function (FIREBASE_URL, $firebaseAuth, $firebaseArray, $cookies, $location, $window) {
 
     var ref = new Firebase(FIREBASE_URL + '/movies');
     var authData = ref.getAuth();
     var auth = $firebaseAuth(ref);
     var movies = $firebaseArray(ref);
 
-    if(authData) {
-      $window.location = './404.html';
-    }
-    function getAuth() {
-        auth.$authWithPassword({
-          email: 'sambo@gmail.com',
-          password: '090985'
-        }).then(function (authData) {
-            // $log(authData);
-          $cookies.putObject('token', authData);
-        }).catch(function (error) {
-           // $log('Error authentication :', error);
-        });
-    }
+    // function getAuth(email, password) {
+    //     auth.$authWithPassword({
+    //       email: email,
+    //       password: password
+    //     }).then(function (authData) {
+    //         $location.path('/list');
+    //       $cookies.putObject('token', authData);
+    //     }).catch(function (error) {
+    //       // $window.location = './404.html';
+    //     });
+    // }
 
     function getMovie(id) {
      return movies.$loaded()
@@ -86,7 +83,6 @@ angular.module('angularFireApp')
 
     // Public API here
     return {
-      getAuth: getAuth,
       getMovie: getMovie,
       getMovies: getMovies,
       addMovie: addMovie,

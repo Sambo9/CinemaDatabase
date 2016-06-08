@@ -8,7 +8,7 @@
  * Controller of the angularFireApp
  */
 angular.module('angularFireApp')
-  .controller('ListController', function ($scope, FirebaseConnect) {
+  .controller('ListController', function ($scope, FirebaseConnect, Movies) {
     $scope.movies = FirebaseConnect.getMovies();
     $scope.movieSuccess = false;
     $scope.movieError = false;

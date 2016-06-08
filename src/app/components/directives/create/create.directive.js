@@ -37,7 +37,7 @@ angular.module('angularFireApp')
         };
 
         $scope.removeActor = function (index) {
-          $scope.movie.actors.splice(index, 1);
+            $scope.movie.actors.splice(index, 1);
         };
 
         // =====================================

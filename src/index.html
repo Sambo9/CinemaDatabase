@@ -26,7 +26,7 @@
 
     <div class="container-fluid">
       <navbar></navbar>
-      <div ng-view test-authent></div>
+      <div ng-view authorization></div>
     </div>
 
     <!-- build:js(src) scripts/vendor.js -->
@@ -48,18 +48,17 @@
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
     <!-- js files will be automatically insert here -->
-    <script src="app/scripts/services/firebaseconnect.js"></script>
-    <script src="app/scripts/services/authService.js"></script>
-    <script src="app/scripts/directives/navbar.js"></script>
-    <script src="app/scripts/directives/create.directive.js"></script>
-    <script src="app/scripts/directives/update.directive.js"></script>
-    <script src="app/scripts/directives/list.js"></script>
-    <script src="app/scripts/directives/login.directive.js"></script>
-    <script src="app/scripts/controllers/create.js"></script>
-    <script src="app/scripts/controllers/main.js"></script>
-    <script src="app/scripts/controllers/list.js"></script>
-    <script src="app/scripts/controllers/update.js"></script>
-    <script src="app/scripts/controllers/login.js"></script>
+    <script src="app/components/factories/authService.js"></script>
+    <script src="app/components/directives/navbar/navbar.js"></script>
+    <script src="app/components/directives/authorization/authorization.js"></script>
+    <script src="app/components/directives/create/create.directive.js"></script>
+    <script src="app/components/directives/update/update.directive.js"></script>
+    <script src="app/components/directives/list/list.js"></script>
+    <script src="app/components/directives/login/login.directive.js"></script>
+    <script src="app/create/create.js"></script>
+    <script src="app/list/list.js"></script>
+    <script src="app/update/update.js"></script>
+    <script src="app/login/login.js"></script>
     <!-- endinject -->
 
     <!-- inject:partials -->

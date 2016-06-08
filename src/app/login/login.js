@@ -25,10 +25,7 @@ angular.module('angularFireApp')
 
 
     $scope.connect = function (email, password) {
-      var logged = user.connect(email, password);
-      if (!logged) {
-        $scope.logError = true;
-      }
+      user.connect(email, password);
     };
 
   });

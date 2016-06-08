@@ -8,7 +8,7 @@
 angular.module('angularFireApp')
   .directive('navbar', function () {
     return {
-      templateUrl: 'views/navbar.html',
+      templateUrl: 'app/components/directives/navbar/navbar.html',
       restrict: 'E',
       controller : function ($scope, user) {
 

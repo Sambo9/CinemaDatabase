@@ -9,16 +9,16 @@
 angular.module('angularFireApp')
   .directive('create', function () {
     return {
-      templateUrl: 'views/create.template.html',
+      templateUrl: 'app/components/directives/create/create.template.html',
       restrict: 'E',
-      controller: function ($scope, FirebaseConnect, $location) {
+      controller: function ($scope, Movies, $location) {
 
         // =====================================
         // ========= Function addMovie =========
         // =====================================
         $scope.addMovie = function () {
 
-          FirebaseConnect.addMovie($scope.movie)
+          Movies.addMovie($scope.movie)
             .then(function () {
               $scope.movieSuccess = true;
               $scope.movieError = false;
@@ -39,9 +39,6 @@ angular.module('angularFireApp')
         $scope.removeActor = function (index) {
           $scope.movie.actors.splice(index, 1);
         };
-        // $scope.addMovie = function () {
-        //   FirebaseConnect.addMovie($scope.movie);
-        // };
 
         // =====================================
         // ========= Function redirect =========

@@ -8,23 +8,23 @@
   function routeConfig($routeProvider) {
     $routeProvider
       .when('/list', {
-        templateUrl: 'views/list.template.html',
+        templateUrl: 'app/list/list.html',
         controller: 'ListController'
       })
       .when('/create', {
-        templateUrl: 'views/create.template.html',
+        templateUrl: 'app/create/create.html',
         controller: 'CreateController'
       })
       .when('/update/:id', {
-        templateUrl: 'views/update.template.html',
+        templateUrl: 'app/update/update.html',
         controller: 'UpdateController'
       })
       .when('/login', {
-          templateUrl: 'views/login.template.html',
+          templateUrl: 'app/login/login.html',
         controller: 'LoginController'
       })
       .otherwise({
-        redirectTo: '/login'
+        redirectTo: '/list'
       });
   }
 

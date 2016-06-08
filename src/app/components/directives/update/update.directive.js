@@ -9,15 +9,15 @@
 angular.module('angularFireApp')
   .directive('update', function () {
     return {
-      templateUrl: 'views/update.template.html',
+      templateUrl: 'app/components/directives/update/update.template.html',
       restrict: 'E',
 
-      controller: function ($scope, FirebaseConnect, $location, $window) {
+      controller: function ($scope, Movies, $location, $window) {
         // ===================================
         // ========= Function update =========
         // ===================================
         $scope.update = function (movie) {
-          FirebaseConnect.updateMovie(movie)
+          Movies.updateMovie(movie)
             .then(function () {
               $scope.updatedSuccess = true;
               $window.scrollTo(0, 0);

@@ -27,7 +27,8 @@ angular.module('angularFireApp')
       connect: connect(),
       validConnection: function () {
         if (!user) {
-          if (authService.$getAuth().uid) {
+
+          if (authService.$getAuth()) {
             user = new ConnectedUser(authService.$getAuth().uid, authService.$getAuth().password.email);
           }
           else {
@@ -54,7 +55,7 @@ angular.module('angularFireApp')
 
 
   })
-  .factory('ConnectedUser', function () {
+  .factory('ConnectedUser', function ($location, authService) {
 
     function ConnectedUser(uid, email) {
       this.uid = uid;

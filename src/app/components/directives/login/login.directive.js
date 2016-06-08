@@ -12,7 +12,7 @@
 angular.module('angularFireApp')
   .directive('login', function () {
     return {
-      templateUrl: 'views/login.template.html',
+      templateUrl: 'app/components/directives/login/login.template.html',
       restrict: 'E',
       controller: function ($scope) {
       }

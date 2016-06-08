@@ -8,8 +8,8 @@
  * Controller of the angularFireApp
  */
 angular.module('angularFireApp')
-  .controller('ListController', function ($scope, FirebaseConnect, Movies) {
-    $scope.movies = FirebaseConnect.getMovies();
+  .controller('ListController', function ($scope, Movies) {
+    $scope.movies = Movies.getMovies();
     $scope.movieSuccess = false;
     $scope.movieError = false;
   });

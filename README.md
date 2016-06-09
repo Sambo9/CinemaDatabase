@@ -1,6 +1,6 @@
 # Getting Started
 
-Welcome to the CinemaDatabase web app !
+Welcome to the CinemaDatabase web app ! This AngularJS app use gulp and angularfire.
 
 ## Installation
 
@@ -42,4 +42,9 @@ Email : test@test.com
 Password : test
 
 There you go !
+
+## Contribute
+
+Contributions are always welcome!
+Please read the [contribution guidelines](contributing.md) first.
 

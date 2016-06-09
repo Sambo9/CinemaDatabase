@@ -19,6 +19,8 @@ $ npm install -g bower
 
 ## Quick start
 
+Install all depedencies for this project
+
 ```bash
 # Install all depedencies
 $ npm install
@@ -26,11 +28,17 @@ $ bower install
 ```
 ## Usage
 
+To start the application, use gulp
+
 ```bash
 # Start the application
 $ gulp serve
 ```
+
+Then go in your browser and use this user to authenticate :
+
 Email : test@test.com
 Password : test
 
+There you go !
 

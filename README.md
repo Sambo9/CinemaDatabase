@@ -38,6 +38,7 @@ $ gulp serve
 Then go in your browser and use this user to authenticate :
 
 Email : test@test.com
+
 Password : test
 
 There you go !

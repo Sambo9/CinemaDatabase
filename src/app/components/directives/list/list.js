@@ -29,6 +29,7 @@ angular.module('angularFireApp')
               $scope.movieError = true;
             });
         };
+
         // =====================================
         // ========= Function redirect =========
         // =====================================

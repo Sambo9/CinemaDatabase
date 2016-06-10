@@ -11,6 +11,10 @@ angular.module('angularFireApp')
     return {
       templateUrl: 'app/components/directives/create/create.template.html',
       restrict: 'E',
+      transclude: true,
+      scope: {
+        movie: '='
+      },
       controller: function ($scope, Movies, $location) {
 
         // =====================================

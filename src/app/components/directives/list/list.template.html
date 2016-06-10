@@ -1,5 +1,5 @@
-<div class="container">
 
+<div class="container">
 <div class="alert alert-success" ng-show="movieSuccess">
   <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   <strong>Film supprimé !</strong>
@@ -9,8 +9,8 @@
   <strong>Erreur ! Film non supprimé</strong>
 </div>
 
-<h1>Liste des films</h1>
-  <br/>
+  <h1 ng-transclude></h1>
+
   <div class="form-group">
   <label>Recherche :</label>
   <input type="text" ng-model='filterByTitle' placeholder="Titre"/>

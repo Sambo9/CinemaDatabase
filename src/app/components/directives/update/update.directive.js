@@ -11,7 +11,7 @@ angular.module('angularFireApp')
     return {
       templateUrl: 'app/components/directives/update/update.template.html',
       restrict: 'E',
-
+      transclude: true,
       controller: function ($scope, Movies, $location, $window) {
         // ===================================
         // ========= Function update =========

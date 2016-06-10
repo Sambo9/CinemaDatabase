@@ -11,6 +11,8 @@ angular.module('angularFireApp')
     return {
       templateUrl: 'app/components/directives/list/list.template.html',
       restrict: 'E',
+      transclude: true,
+      scope: {movies: '='},
       controller:
         function($scope, Movies, $location) {
         // ===================================

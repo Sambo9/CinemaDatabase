@@ -25,7 +25,7 @@
 <div class="form-inline">
   <label for="actorsForm">Acteurs</label>
   <br/>
-    <div class="form-group" id="actorsForm" ng-repeat="actor in movie.actors">
+    <div class="form-group col-lg-12" id="actorsForm" ng-repeat="actor in movie.actors">
       <input type="text" class="form-control" ng-model="actor.firstname" placeholder="Prénom">
       <input type="text" class="form-control" ng-model="actor.lastname" placeholder="Nom" >
       <button type="button" class="btn btn-danger" ng-click="removeActor($index)">
@@ -35,7 +35,7 @@
     </div>
 </div>
   <br/>
-  <div class="form-group">
+<div class="form-group">
     <button type="button" class="btn btn-success" ng-click="addingActor()">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       Ajouter un acteur

@@ -15,7 +15,14 @@ angular.module('angularFireApp')
       scope: {
         movie: '='
       },
-      controller: function ($scope, Movies, $location) {
+      controller: function ($scope, Movies, $location, NOTE_SELECT) {
+        $scope.movieSuccess = false;
+        $scope.movieError = false;
+        $scope.movie = {};
+        $scope.select = NOTE_SELECT;
+        $scope.movie.rate = NOTE_SELECT[2];
+        $scope.movie.poster = {};
+        $scope.movie.actors = [{}];
 
         // =====================================
         // ========= Function addMovie =========

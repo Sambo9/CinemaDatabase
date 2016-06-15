@@ -23,7 +23,7 @@
 <div class="form-inline">
   <label for="actorsInput">Acteurs</label>
   <br/>
-    <div class="form-group" ng-repeat="actor in movie.actors">
+    <div class="form-group col-lg-12" ng-repeat="actor in movie.actors">
     <input type="text" class="form-control" id="actorsInput" ng-model="actor.firstname" placeholder="Prénom acteur">
     <input type="text" class="form-control" ng-model="actor.lastname" placeholder="Nom acteur" >
       <button type="button" class="btn btn-danger" ng-click="removeActor($index)">
@@ -31,6 +31,8 @@
       </button>
     </div>
 </div>
+  <br/>
+  <br/>
   <br/>
 <div class="form-group">
     <button type="button" class="btn btn-success" ng-click="addingActor()">

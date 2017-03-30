@@ -8,7 +8,7 @@ First install nodejs, npm and bower :
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+
 # Install nodejs
 $ sudo apt-get install nodejs
 # Install npm
